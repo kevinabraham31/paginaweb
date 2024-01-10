@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+    header {
+        background-color: #0917df;
+        color: #fff;
+        text-align: center;
+        padding: 11px;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    .header-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .side-images {
+        width: 100px; /* ajusta el ancho según tus necesidades */
+        height: auto; /* esto mantiene la proporción original de la imagen */
+        margin: 0 20px; /* ajusta el margen entre las imágenes y el texto */
+    }
+</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <header>
+        <center>
+            <div class="header-container">
+                <img src="imagenes/LOGO.png" alt="" class="side-images">    
+                <h1>TECNOLÓGICO NACIONAL DE MÉXICO CAMPUS ACAPULCO</h1>
+                <img src="imagenes/Britanica.png" alt="" class="side-images">
+            </div>
+        </center> 
+    </header>
+
+    <div class="gradient">
+        <div class="imagenes">
+            <div class="imagen-contenedor">
+                <img src="imagenes/Administrativo.png" alt="" class="foto1"  id="admin_imagen">
+                <button class="imagen-boton" id="admin"> <a href="funciones/loginAdmin.php" > Administrativo </a> </button>
+            </div>
+            
+            <div class="imagen-contenedor">
+                <img src="imagenes/Docente.png" id="docente_imagen" alt="" class="foto1">
+                <button class="imagen-boton" id="docente"> <a href="funciones/loginProfe.php" > Docente  </a> </button>
+            </div>
+            
+            <div class="imagen-contenedor">
+                <img src="imagenes/Alumno.png" id="alumnos_imagen" alt="No carga" class="foto2">
+                <button class="imagen-boton" id="alumnos"> <a href="funciones/loginAlumno.php" > Estudiante </a></button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
