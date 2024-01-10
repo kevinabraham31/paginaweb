@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+        body {
+            background: linear-gradient(to right, #0b12d6, #f9f8fa); 
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+            font-family: 'Roboto', sans-serif;
+            color: rgb(12, 25, 218);
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        @keyframes gradient {
+            0% {background-position: 0% 50%;}
+            50% {background-position: 100% 50%;}
+            100% {background-position: 0% 50%;}
+        }
+       
+        .entrada {
+            width: 200px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            background-color: rgba(255, 255, 255, 0.954);
+            transition: background-color 0.5s ease;
+        }
+        .entrada:hover {
+            background-color: rgba(255, 255, 255, 1);
+        }
+        .btn {
+            background: linear-gradient(to right, #0d14e9, #f9f8fa); 
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 2px 2px 10px rgb(243, 243, 243);
+            transition: background-color 0.5s ease, box-shadow 0.5s ease;
+        }
+        .btn:hover {
+            transform: scale(1.1); 
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); 
+            background: linear-gradient(to left , #fff12a, #f84141);
+        }
+        .titulo {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 35px;
+            background-color: rgba(255, 255, 255, 0.8);
+          
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); 
+        }
+        
+    </style>
+    <script>
+        function validarRFC() {
+            var rfcInput = document.getElementById('RFC');
+            var rfcPattern = /^[A-Z]{4}/;
+
+            if (!rfcPattern.test(rfcInput.value)) {
+                alert('Los primeros 4 caracteres del RFC deben ser letras en mayúsculas.');
+                return false;
+            } else {
+                return true; 
+            }
+        }
+    </script>
+</head>
+<body>
+    
+    <form action='loginAlumno.php' method='POST' onsubmit='return validarRFC();'>
+        <fieldset style='width: 250px; background-color: rgba(38, 13, 231, 0.8); padding: 20px; border-radius: 10px;'>
+            <legend style='color: #303030; font-size: 23px; font-weight: bold;' class="titulo">REGISTRO ALUMNO</legend>
+            <input class='entrada' type='text' name='nombre' placeholder='Nombre Completo' id='nom' required='true'><br>
+            <input class='entrada' type='text' name='apellidos' placeholder='Apellido Completo' required='true'><br>
+            <input class='entrada' type='email' name='email' placeholder='Correo electronico' required='true'><br>
+            <input class='entrada' type='number' name='no_control' placeholder='Número de control' required='true'><br>
+            <input class='entrada' type='text' name='carrera' placeholder='Licenciatura' required='true'><br>
+            <input class='entrada' type='text' name='RFC' placeholder='Contraseña' id='RFC'  maxlength='13' required='true'><br>
+            <button class='btn' name='enviar'>CAPTURAR</button>
+            <a class='btn' href='loginAlumno.php'>REGRESAR</a>
+        </fieldset>
+    </form>
+</body>
+</html>

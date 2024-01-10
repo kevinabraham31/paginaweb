@@ -1,0 +1,38 @@
+
+/*body {
+    background-color: #FBE6B1; 
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+#mensaje {
+    font-size: 50px;
+    color: #ff0000; 
+}*/
+
+
+.btn {
+    
+    display: inline-block;  /* Define cómo se va a mostrar el elemento; en este caso, como un bloque en línea */
+    padding: 10px 15px;  /* Establece el espacio interno (padding) del botón, 10px arriba/abajo y 15px izquierda/derecha */
+    border-radius: 5px;  /* Define el radio de las esquinas del botón, creando bordes redondeados */
+    cursor: pointer;  /* Indica que el cursor debe cambiar a una mano cuando pasa sobre el botón, indicando que es interactivo */
+    text-decoration: none;  /* Elimina cualquier decoración de texto predeterminada (como subrayado) */
+    border: 1px solid #000;  /* Establece el borde del botón con un ancho de 1 píxel y un color negro (#000) */
+    color: #ffffff;  /* Establece el color del texto del botón (en este caso, negro) */
+    font-size: 1em;  /* Establece el tamaño de fuente del texto del botón a 1 em (1 em es igual al tamaño de fuente actual del elemento) */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    /* Define la fuente del texto del botón, utilizando una lista de fuentes en caso de que la primera no esté disponible */
+    background-color: #160db9; /* Cambia este valor al color que desees */
+    
+}
+
+
+.entrada{
+
+background-color: aqua;
+font-size: 1.2rem;
+padding: 5px 0px 4px 0px;
+outline: none;
+
+}

@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.gradient {
+    padding-top: 5px;
+    padding-bottom: 100px;
+    width: 100vw;
+    background: linear-gradient(334deg, #7ca0ef, #150ed6, #f2eef0);
+    background-size: 180% 180%;
+    animation: gradient-animation 6s ease infinite;
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+
+
+.imagenes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 80vw;
+    height: 62vh;
+    margin: auto;
+    gap: 80px; /* Reducí el espacio entre las imágenes */
+}
+
+.imagen-contenedor {
+    text-align: center;
+}
+
+.imagen-contenedor img {
+    width: 80%; /* Reducí el ancho de las imágenes */
+    height: 50%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.imagen-boton {
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(to right, #2d00f7, #eeedf0);
+    color: white;
+    font-size: 20px;
+    padding: 15px 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+
+.imagen-boton:hover + img {
+    transform: scale(1.5);
+}
+
+.imagen-boton:active {
+    color: #ff0000;
+}
+
+.imagen-boton:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 5px rgba(0, 0, 0, 0.4);
+    background: linear-gradient(to right, #ff8000, #fff200);
+}
+
+.botones {
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+#admin, #docente, #alumnos {
+    margin-top: 20px;
+
+}
+
+@media (max-width: 768px) {
+
+    .header-container{
+
+      font-size:8px ;
+      text-align: justify;
+      
+
+    }
+
+   
+    a {
+        font-size: 16px;
+    }
+
+    .imagenes {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .imagen-contenedor img {
+        width: 100%;
+    }
+}
+.imagen-contenedor img {
+    max-width: 100%;
+    height: auto;
+}
